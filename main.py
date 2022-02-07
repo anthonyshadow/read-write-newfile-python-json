@@ -25,7 +25,7 @@ if os.path.isfile("./ages.json") and os.stat("./ages.json").st_size != 0:
 #if File does not exist
 
 else:
-    old_file = open(".ages.json", "w+")
+    old_file = open("./ages.json", "w+")
     data = {"name": "Anthony", "age": 26}
     print("No file was found, setting default age to", data["age"])
 
