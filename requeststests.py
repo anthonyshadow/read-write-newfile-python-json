@@ -21,22 +21,32 @@ from PIL import Image
 
 #Returning images and information from binary
 
-r = requests.get("https://miro.medium.com/max/3150/1*83gxJM3OJJQxXFiXhRL3JQ.png")
+# r = requests.get("https://miro.medium.com/max/3150/1*83gxJM3OJJQxXFiXhRL3JQ.png")
 
-print("status", r.status_code)
+# print("status", r.status_code)
 
-#return image from binary code that is received, content is binary data
+# #return image from binary code that is received, content is binary data
 
-image = Image.open(BytesIO(r.content))
+# image = Image.open(BytesIO(r.content))
 
 
 
-print(image.size, image.format, image.mode)
+# print(image.size, image.format, image.mode)
 
-#saving image to desired pathway
-path = "./image." + image.format
+# #saving image to desired pathway
+# path = "./image." + image.format
 
-try: 
-    image.save(path, image.format)
-except IOError:
-    print ("Can't save image")
+# try: 
+#     image.save(path, image.format)
+# except IOError:
+#     print ("Can't save image")
+
+
+# Posting data from requests
+
+my_data = {"name": "Anthony", "email": "anthony@example.com"}
+
+r = requests.post("http://www.w3schools.com/php/welcome.php", data=my_data)
+
+f = open("myfile.html", "w+")
+f.write(r.text)
