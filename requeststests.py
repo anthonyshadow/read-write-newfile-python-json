@@ -1,4 +1,5 @@
 import requests
+import simplejson as json
 from io import BytesIO
 from PIL import Image
 
@@ -44,9 +45,19 @@ from PIL import Image
 
 # Posting data from requests
 
-my_data = {"name": "Anthony", "email": "anthony@example.com"}
+# my_data = {"name": "Anthony", "email": "anthony@example.com"}
 
-r = requests.post("http://www.w3schools.com/php/welcome.php", data=my_data)
+# r = requests.post("http://www.w3schools.com/php/welcome.php", data=my_data)
 
-f = open("myfile.html", "w+")
-f.write(r.text)
+# f = open("myfile.html", "w+")
+# f.write(r.text)
+
+
+# Posting to JSON
+
+# url = "https://www.googleapis.com/urlshortner/v1/url"
+# payload = {"longUrl": "http://example.com"}
+# headers = {"Content-Type": "application/json"}
+# r = requests.post(url, json=payload, headers=headers)
+
+# print(json.loads(r.text)["error"]["code"])
